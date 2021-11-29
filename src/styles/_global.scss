@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 45%;
+  @include mq(sphone-landscape) {
+    font-size: 25%;
+  }
+  @include mq(sphone) {
+    font-size: 30%;
+  }
+  @include mq(sphone-landscape) {
+    font-size: 30%;
+  }
+  @include mq(phone) {
+    font-size: 60%;
+  }
+  @include mq(tablet-portrait) {
+    font-size: 79.5%;
+  }
+  @include mq(tablet-wide) {
+    font-size: 80%;
+  }
+  @include mq(desktop-wide) {
+    font-size: 100%;
+  }
+  @include mq(fourK) {
+    font-size: 200%;
+  }
+  @include mq(phone-landscape) {
+    font-size: 52%;
+  }
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+p,
+span,
+label,
+button,
+input,
+select,
+div {
+  font-size: 1.8rem;
+}
+p {
+  font-style: italic;
+}
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+li {
+  list-style: none;
+  font-size: 1.6rem;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-size: 2.4rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+h4 {
+  font-size: 1.6rem;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Roboto', sans-serif;
+}
