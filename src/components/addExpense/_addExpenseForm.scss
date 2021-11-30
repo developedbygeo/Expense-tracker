@@ -1,0 +1,39 @@
+form {
+  @include grid(1fr, 1fr 0.5fr);
+  height: 100%;
+  width: 100%;
+}
+.add-expense__ctrls {
+  @include grid(repeat(2, 1fr), repeat(2, 1fr));
+  gap: 1rem;
+  width: 95%;
+  margin: auto;
+}
+.add-expense__ctrl {
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    &:focus {
+      border: 1px solid $purple;
+    }
+  }
+  label {
+    font-weight: bold;
+    color: $black-fogra;
+  }
+}
+.add-expense__actions {
+  width: 95%;
+  height: 100%;
+  margin: auto;
+  @include flex(flex-end, center, row);
+  button {
+    background: $purple;
+    padding: 0.75rem;
+    color: $cultured;
+    border-radius: 0.75rem;
+  }
+}
