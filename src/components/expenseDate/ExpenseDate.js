@@ -1,4 +1,4 @@
-export default function ExpenseDate(props) {
+const ExpenseDate = (props) => {
   const year = props.date.toLocaleString('en-US', { year: 'numeric' });
   const month = props.date.toLocaleString('en-US', { month: 'short' });
   const day = props.date.toLocaleString('en-US', { day: 'numeric' });
@@ -10,4 +10,6 @@ export default function ExpenseDate(props) {
       <div>{year}</div>
     </div>
   );
-}
+};
+
+export default ExpenseDate;
