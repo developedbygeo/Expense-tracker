@@ -1,9 +1,7 @@
 .expense-item {
   @include flex(space-between, center, row);
-  box-shadow: 0 2px 8px rgba($color: $black-fogra, $alpha: 0.25);
   padding: 0.5rem;
   margin: 1rem 0;
-  border-radius: 1rem;
   background: $eerie;
   color: $cultured;
   h2 {
