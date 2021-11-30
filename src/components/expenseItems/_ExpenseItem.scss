@@ -1,5 +1,6 @@
 .expense-item {
-  @include flex(space-between, center, row);
+  @include grid(0.3fr auto 0.2fr, 1fr);
+  gap: 1rem;
   padding: 0.5rem;
   margin: 1rem 0;
   background: $eerie;
@@ -8,6 +9,13 @@
     color: $gainsboro;
     flex: 1;
     margin: 0 1rem;
+  }
+  button {
+    background: $cultured;
+    border-radius: 0.75rem;
+    font-size: 1.5rem;
+    // padding: 0.5rem;
+    margin: auto;
   }
 }
 .expense-item__description {
