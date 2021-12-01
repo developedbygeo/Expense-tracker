@@ -1,0 +1,9 @@
+@import 'src/styles/_variables.scss';
+
+.App {
+  width: 85%;
+  height: auto;
+  min-height: 80%;
+  background: $dark-liver;
+  border-radius: 1rem;
+}
