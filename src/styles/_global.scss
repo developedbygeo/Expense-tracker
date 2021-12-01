@@ -39,18 +39,23 @@ body {
   height: 100vh;
 }
 #root {
-  height: 100%;
+  height: auto;
+  min-height: 100vh;
   width: 100%;
+  background: $black-fogra;
+  @include flex(center, center, column);
 }
 
 p,
 span,
 label,
-button,
 input,
 select,
 div {
   font-size: 1.8rem;
+}
+button {
+  font-size: 1.6rem;
 }
 p {
   font-style: italic;
