@@ -3,18 +3,18 @@
   flex: 0.25;
   justify-items: center;
   background: $eerie-black;
-  padding: 0.5rem;
-  border-radius: 1rem;
+  padding: 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
   border: 1px solid $cultured;
   gap: 0.5rem;
   letter-spacing: 0.05rem;
   div {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     color: $gainsboro;
   }
   .expense-date-day {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
 }
