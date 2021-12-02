@@ -1,9 +1,17 @@
 import AddExpenseForm from './AddExpenseForm';
 
-const AddExpense = () => {
+const AddExpense = (props) => {
+  const expenseSaveHandler = (providedData) => {
+    const expenseData = {
+      ...providedData,
+      id: new Date().valueOf(),
+    };
+    props.onAddExpense(expenseData);
+  };
+
   return (
     <div className="add-expense">
-      <AddExpenseForm />
+      <AddExpenseForm onExpenseSave={expenseSaveHandler} />
     </div>
   );
 };
