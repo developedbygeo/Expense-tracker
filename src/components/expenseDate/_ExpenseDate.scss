@@ -11,10 +11,16 @@
   div {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
-    font-size: 1.6rem;
     color: $gainsboro;
   }
+  .expense-date-month,
   .expense-date-day {
-    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .expense-date-year {
+    font-size: 1.6rem;
+  }
+  .expense-date-month .expense-date-day {
+    font-size: 1.8rem;
   }
 }
