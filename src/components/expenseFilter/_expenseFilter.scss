@@ -1,0 +1,20 @@
+.app-wrapper {
+  height: 75%;
+  width: 100%;
+}
+.expenses-filter {
+  width: 100%;
+  height: 100%;
+}
+.expenses-filter__control {
+  @include flex(space-between, center, row);
+  label {
+    color: $cultured;
+  }
+  select {
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+  }
+}
