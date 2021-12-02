@@ -28,7 +28,11 @@ const AddExpenseForm = (props) => {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    const expenseData = userInput;
+    const expenseData = {
+      title: userInput.inputTitle,
+      date: new Date(userInput.inputDate),
+      amount: userInput.inputPrice,
+    };
     props.onExpenseSave(expenseData);
     setUserInput(() => {
       return {
@@ -57,8 +61,6 @@ const AddExpenseForm = (props) => {
             onChange={priceChangeHandler}
             value={userInput.inputPrice}
             type="number"
-            min="0.5"
-            step="0.5"
             placeholder="Amount paid"
           ></input>
         </div>
