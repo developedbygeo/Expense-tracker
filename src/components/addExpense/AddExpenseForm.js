@@ -1,19 +1,76 @@
-const AddExpenseForm = () => {
+import { useState } from 'react';
+
+const AddExpenseForm = (props) => {
+  const [userInput, setUserInput] = useState({
+    inputTitle: '',
+    inputPrice: '',
+    inputDate: '',
+  });
+
+  const titleChangeHandler = (e) => {
+    setUserInput((prevState) => {
+      return { ...prevState, inputTitle: e.target.value };
+    });
+  };
+
+  const priceChangeHandler = (e) => {
+    setUserInput((prevState) => {
+      return { ...prevState, inputPrice: e.target.value };
+    });
+  };
+
+  const dateChangeHandler = (e) => {
+    setUserInput((prevState) => {
+      return { ...prevState, inputDate: e.target.value };
+    });
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    const expenseData = userInput;
+    props.onExpenseSave(expenseData);
+    setUserInput(() => {
+      return {
+        inputTitle: '',
+        inputPrice: '',
+        inputDate: '',
+      };
+    });
+  };
+
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="add-expense__ctrls">
         <div className="add-expense__ctrl">
           <label>Item</label>
-          <input type="text" placeholder="Item purchased" />
+          <input
+            onChange={titleChangeHandler}
+            value={userInput.inputTitle}
+            type="text"
+            placeholder="Item purchased"
+          />
         </div>
         <div className="add-expense__ctrl">
           <label>Price</label>
-          {/* <input type="number" placeholder="Price" min="0.01" step="0.01" /> */}
-          <input type="tel" placeholder="Amount paid"></input>
+          <input
+            onChange={priceChangeHandler}
+            value={userInput.inputPrice}
+            type="number"
+            min="0.5"
+            step="0.5"
+            placeholder="Amount paid"
+          ></input>
         </div>
         <div className="add-expense__ctrl">
           <label>Date</label>
-          <input type="date" min="2019-01-01" max="2025-12-31" />
+          <input
+            onChange={dateChangeHandler}
+            value={userInput.inputDate}
+            type="date"
+            min="2019-01-01"
+            max="2025-12-31"
+          />
         </div>
       </div>
       <div className="add-expense__actions">
