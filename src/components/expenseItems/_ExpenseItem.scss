@@ -1,5 +1,5 @@
 .expense-item {
-  @include grid(0.3fr 1fr 0.2fr, 1fr);
+  @include grid(0.3fr 1fr, 1fr);
   gap: 1rem;
   padding: 0.5rem;
   margin: 1rem 0;
