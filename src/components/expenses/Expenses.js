@@ -9,6 +9,22 @@ export default function Expenses(props) {
     setSelectedFilter(selection);
   };
 
+  const filteredExpenses = props.items.filter(
+    (item) => item.date.getFullYear() === parseInt(selectedFilter)
+  );
+
+  let expensesContent = <p>No data found.</p>;
+  if (filteredExpenses.length > 0) {
+    expensesContent = filteredExpenses.map((item) => (
+      <ExpenseItem
+        key={item.id}
+        title={item.title}
+        date={item.date}
+        amount={item.amount}
+      />
+    ));
+  }
+
   return (
     <div className="app-wrapper">
       <Card className="expenses">
@@ -16,15 +32,7 @@ export default function Expenses(props) {
           selected={selectedFilter}
           onFilterChange={filterChangeHandler}
         />
-
-        {props.items.map((item) => (
-          <ExpenseItem
-            key={item.id}
-            title={item.title}
-            date={item.date}
-            amount={item.amount}
-          />
-        ))}
+        {expensesContent}
       </Card>
     </div>
   );
