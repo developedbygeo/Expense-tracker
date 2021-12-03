@@ -53,6 +53,7 @@ const AddExpenseForm = (props) => {
             value={userInput.inputTitle}
             type="text"
             placeholder="Item purchased"
+            required
           />
         </div>
         <div className="add-expense__ctrl">
@@ -62,6 +63,7 @@ const AddExpenseForm = (props) => {
             value={userInput.inputPrice}
             type="number"
             placeholder="Amount paid"
+            required
           ></input>
         </div>
         <div className="add-expense__ctrl">
@@ -72,6 +74,7 @@ const AddExpenseForm = (props) => {
             type="date"
             min="2019-01-01"
             max="2025-12-31"
+            required
           />
         </div>
       </div>
