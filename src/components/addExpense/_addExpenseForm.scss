@@ -2,12 +2,39 @@ form {
   @include grid(1fr, 1fr 0.5fr);
   height: 100%;
   width: 100%;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
 }
 .add-expense__ctrls {
   @include grid(repeat(2, 1fr), repeat(2, 1fr));
   gap: 1rem;
   width: 95%;
   margin: auto;
+  color: $platinum;
+}
+.form-toggle {
+  height: 10vh;
+  background: $raisin-black;
+  @include flex(center, center, row);
+  button {
+    background: $orange-web;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    color: $eerie-black;
+    transition: all 150ms ease-in-out;
+    -webkit-box-shadow: 5px 5px 15px 2px $eerie-black;
+    box-shadow: 5px 5px 15px 2px $eerie-black;
+    &:hover {
+      background: $orange-web-str;
+      transform: scale(1.05);
+    }
+  }
 }
 .add-expense__ctrl {
   input {
@@ -17,12 +44,11 @@ form {
     border: none;
     outline: none;
     &:focus {
-      border: 1px solid $purple;
+      border: 1px solid $orange-web;
     }
   }
   label {
     font-weight: bold;
-    color: $black-fogra;
   }
 }
 .add-expense__actions {
@@ -30,10 +56,25 @@ form {
   height: 100%;
   margin: auto;
   @include flex(flex-end, center, row);
+  gap: 1.25rem;
   button {
-    background: $purple;
     padding: 0.75rem;
-    color: $cultured;
+    color: $platinum;
     border-radius: 0.75rem;
+    transition: all 150ms ease-in-out;
+    -webkit-box-shadow: 5px 5px 6px 2px rgba(24, 24, 27, 0.6);
+    box-shadow: 5px 5px 6px 2px rgba(24, 24, 27, 0.6);
+  }
+  .submit {
+    background: $green-cta;
+    &:hover {
+      background: $green-cta-active;
+    }
+  }
+  .cancel {
+    background: $red-cta;
+    &:hover {
+      background: $red-cta-active;
+    }
   }
 }
