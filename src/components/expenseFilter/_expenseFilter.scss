@@ -1,5 +1,6 @@
 .app-wrapper {
-  height: 75%;
+  height: 75vh;
+  overflow-y: scroll;
   width: 100%;
 }
 .expenses-filter {
@@ -9,12 +10,14 @@
 .expenses-filter__control {
   @include flex(space-between, center, row);
   label {
-    color: $cultured;
+    color: $platinum;
   }
   select {
     border: none;
     outline: none;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
+    background: $dim-gray;
+    color: $platinum;
   }
 }
