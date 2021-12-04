@@ -3,15 +3,18 @@
   gap: 1rem;
   padding: 0.5rem;
   margin: 1rem 0;
-  background: $eerie;
-  color: $cultured;
+  background: $raisin-black;
+  color: $platinum;
+  -webkit-box-shadow: 5px 5px 10px -1px rgba(0, 0, 0, 0.4);
+  box-shadow: 5px 5px 5px -1px rgba(0, 0, 0, 0.4);
+
   h2 {
-    color: $gainsboro;
+    color: $platinum;
     flex: 1;
     margin: 0 1rem;
   }
   button {
-    background: $cultured;
+    background: $platinum;
     border-radius: 0.75rem;
     font-size: 1.5rem;
     margin: auto;
@@ -29,8 +32,8 @@
 }
 .expense-item__price {
   font-weight: bold;
-  background-color: $purple;
-  border: 1px solid $cultured;
+  background-color: $jet;
+  border: 1px solid $dim-gray;
   padding: 0.5rem;
   border-radius: 1rem;
   @include mq(phablet) {
