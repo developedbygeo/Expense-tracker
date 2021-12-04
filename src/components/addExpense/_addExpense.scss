@@ -1,5 +1,10 @@
 .add-expense {
-  background: $amethyst;
-  color: $cultured;
+  background: $jet;
+  background: linear-gradient(
+    180deg,
+    rgba($color: $jet, $alpha: 1) 0%,
+    rgba($color: $raisin-black, $alpha: 1)
+  );
+  color: $platinum;
   height: 25%;
 }
