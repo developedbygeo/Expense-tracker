@@ -1,0 +1,27 @@
+.chart-bar {
+  height: 100%;
+  width: 35%;
+  @include flex(center, center, column);
+}
+.chart-bar__inner {
+  height: 75%;
+  width: 100%;
+  margin: auto;
+  border: 1px solid $eerie-black;
+  border-radius: 1rem;
+  background: $raisin-black;
+  overflow: hidden;
+  @include flex(flex-end, initial, column);
+}
+
+.chart-bar__fill {
+  background: $orange-web-str;
+  width: 100%;
+  transition: all 300ms ease-in-out;
+}
+.chart-bar__label {
+  font-weight: bold;
+  font-size: 1.35rem;
+  font-style: italic;
+  text-align: center;
+}

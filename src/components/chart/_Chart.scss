@@ -1,0 +1,10 @@
+.chart {
+  margin-top: 1rem;
+  border-radius: 1rem;
+  background: $dim-gray;
+  text-align: center;
+  @include grid(repeat(12, 1fr), 1fr);
+  justify-items: center;
+  align-items: center;
+  height: 10rem;
+}
