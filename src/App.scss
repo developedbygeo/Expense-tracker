@@ -6,4 +6,13 @@
   min-height: 80%;
   background: $jet;
   border-radius: 1rem;
+  @include mq(phone-landscape) {
+    width: 50%;
+  }
+  @include mq(tablet-landscape) {
+    width: 60%;
+  }
+  @include mq(desktop) {
+    width: 60%;
+  }
 }
