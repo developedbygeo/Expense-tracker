@@ -1,6 +1,6 @@
+import { useState } from 'react';
 import Card from '../card/Card';
 import ExpenseFilter from '../expenseFilter/ExpenseFilter';
-import { useState } from 'react/cjs/react.development';
 import ExpensesList from '../expensesList/ExpensesList';
 import ExpensesChart from '../expensesChart/ExpensesChart';
 
