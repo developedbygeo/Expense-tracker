@@ -1,8 +1,9 @@
 import ChartBar from './ChartBar';
 
 const Chart = (props) => {
-  const dataPointValues = props.dataPoints.map((dataPoint) => dataPoint.value);
-  const maximumValue = Math.max(...dataPointValues);
+  const maximumValue = props.dataPoints
+    .map((dataPoint) => dataPoint.value)
+    .reduce((partial, sum) => partial + sum, 0);
 
   return (
     <div className="chart">
