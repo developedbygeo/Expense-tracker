@@ -14,6 +14,7 @@ const AddExpenseForm = (props) => {
   };
 
   const priceChangeHandler = (e) => {
+    if (e.target.value < 0) return;
     setUserInput((prevState) => {
       return { ...prevState, inputPrice: e.target.value };
     });
