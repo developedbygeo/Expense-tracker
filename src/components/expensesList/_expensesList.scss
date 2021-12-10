@@ -7,3 +7,17 @@
   text-align: center;
   margin-top: 2rem;
 }
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background: $raisin-black;
+}
+::-webkit-scrollbar-thumb {
+  background: $dark-liver;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: $dim-gray;
+}
